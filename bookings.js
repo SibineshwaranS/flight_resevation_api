@@ -1,7 +1,7 @@
 // routes/bookings.js
 const express = require("express");
 const router = express.Router();
-const pool = require("../db");
+const pool = require("db");
 
 // Helper function to generate a random 6-character alphanumeric PNR
 function generatePNR(length = 6) {
@@ -332,5 +332,6 @@ router.post("/reschedule/confirm", async (req, res) => {
         client.release();
     }
 });
+
 
 module.exports = router;
