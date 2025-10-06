@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const pool = require("db"); // PostgreSQL connection
+const pool = require("./db"); // PostgreSQL connection
 
 // CREATE Airport
 router.post("/create", async (req, res) => {
@@ -96,4 +96,5 @@ router.delete("/delete/:id", async (req, res) => {
 });
 
 module.exports = router;
+
 
