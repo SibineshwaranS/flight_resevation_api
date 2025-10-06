@@ -2,7 +2,7 @@
 const express = require("express");
 const router = express.Router();
 const cron = require("node-cron");
-const pool = require("../db");
+const pool = require("./db");
 
 // ✅ CREATE seat
 // POST multiple seats
@@ -145,3 +145,4 @@ router.patch("/mark-booked", async (req, res) => {
 });
 
 module.exports = router;
+
