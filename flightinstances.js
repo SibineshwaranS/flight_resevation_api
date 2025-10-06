@@ -1,7 +1,7 @@
 // routes/flightinstances.js
 const express = require("express");
 const router = express.Router();
-const pool = require("../db");
+const pool = require("./db");
 
 // Helper function to generate seat numbers based on the JSON layout
 const generateSeatNumbers = (layoutJson) => {
@@ -314,4 +314,5 @@ router.get("/details/:id", async (req, res) => {
 });
 
 // Export both the router and the function, as expected by your server.js
+
 module.exports = { router, shiftExpiredFlights };
