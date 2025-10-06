@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const pool = require("../db"); // PostgreSQL connection
+const pool = require("./db"); // PostgreSQL connection
 
 // ✅ CREATE route
 router.post("/create", async (req, res) => {
@@ -93,6 +93,7 @@ router.delete("/delete/:id", async (req, res) => {
         res.status(500).json({ error: "Error deleting route." });
     }
 });
+
 
 
 module.exports = router;
