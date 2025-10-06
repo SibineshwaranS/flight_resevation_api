@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const pool = require("../db");
+const pool = require("db");
 const multer = require("multer");
 
 // --- MULTER CONFIGURATION (CHANGED) ---
@@ -143,5 +143,6 @@ router.get("/photo/:user_id", async (req, res) => {
         res.status(500).json({ error: err.message });
     }
 });
+
 
 module.exports = router;
