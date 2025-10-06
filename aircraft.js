@@ -1,7 +1,7 @@
 // routes/aircraft.js
 const express = require("express");
 const router = express.Router();
-const pool = require("../db");
+const pool = require("db");
 
 /**
  * A helper function to generate the seat map layout object.
@@ -176,5 +176,6 @@ router.delete("/delete/:id", async (req, res) => {
         client.release();
     }
 });
+
 
 module.exports = router;
