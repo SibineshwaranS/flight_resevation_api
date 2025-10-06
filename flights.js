@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const pool = require("../db"); // pg pool
+const pool = require("./db"); // pg pool
 
 // CREATE flight
 router.post("/create", async (req, res) => {
@@ -98,5 +98,6 @@ router.delete("/delete/:id", async (req, res) => {
         res.status(500).json({ error: "Error deleting flight." });
     }
 });
+
 
 module.exports = router;
