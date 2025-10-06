@@ -11,7 +11,7 @@ const port = 3000;
 // This list defines which websites are allowed to connect to your API
 const allowedOrigins = [
     'http://127.0.0.1:5500', // Your local machine for testing
-    'https://beautiful-bubblegum-d4c12f.netlify.app'
+    'https://flight-reservation-system-sibi.netlify.app'
 ];
 
 app.use(cors({
@@ -36,17 +36,17 @@ app.use(express.static(path.join(__dirname, "public")));
 
 
 // Routes
-const customerProfilesRoutes = require("./routes/customerProfiles");
-const authRoutes = require("./routes/auth");
-const airportRoutes = require("./routes/airports");
-const routesRouter = require("./routes/routes");
-const aircraftRoutes = require("./routes/aircraft");
-const flightsRouter = require("./routes/flights");
-const { router: flightinstancesRouter, shiftExpiredFlights } = require("./routes/flightinstances");
-const flightSeatsRoutes = require("./routes/flightseats");
-const bookingsRoutes = require("./routes/bookings");
-const paymentsRoutes = require("./routes/payments");
-const refundsRoutes = require("./routes/refunds");
+const customerProfilesRoutes = require("./customerProfiles");
+const authRoutes = require("./auth");
+const airportRoutes = require("./airports");
+const routesRouter = require("./routes");
+const aircraftRoutes = require("./aircraft");
+const flightsRouter = require("./flights");
+const { router: flightinstancesRouter, shiftExpiredFlights } = require("./flightinstances");
+const flightSeatsRoutes = require("./flightseats");
+const bookingsRoutes = require("./bookings");
+const paymentsRoutes = require("./payments");
+const refundsRoutes = require("./refunds");
 
 
 
@@ -87,4 +87,5 @@ const PORT = process.env.PORT || 3000; // Use Render's port if available, otherw
 
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
+
 });
